@@ -32,9 +32,6 @@ def extract_images_from_pdf(pdf_file, page_number):
 
     return images
 
-# Rest of the code remains the same...
-
-
 # Function to extract text from a specific page of the PDF
 def extract_text_from_pdf(pdf_file, page_number):
     with open(pdf_file, 'rb') as file:
@@ -70,10 +67,7 @@ def extract_images_from_pdf(pdf_file, page_number):
         with open(image_path, "wb") as img_file:
             img_file.write(image["image"])
         images.append(image_path)
-
     return images
-
-## ... (previous code)
 
 def main():
     pdf_file = '####.pdf'  # Replace with the path to your PDF file
@@ -108,7 +102,7 @@ def main():
         # Display the summarized output for each page (optional)
         print(f"Summarized Output for Page {page_number}:")
         print(summary)
-        print("----------------------\n")
+        print("------------###******###----------\n")
 
     # Create a new presentation
     prs = Presentation()
@@ -133,10 +127,8 @@ def main():
 
     # Save the presentation to a PPT file
     prs.save("summary_presentation_with_image.pptx")
-
     print("Presentation with text summaries and images saved successfully!")
 
-# ... (rest of the code remains the same)
 
 if __name__ == "__main__":
     main()
